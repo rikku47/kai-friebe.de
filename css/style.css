@@ -1,0 +1,66 @@
+a {
+  background-color: aqua;
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h2 {
+  line-height: 2rem;
+}
+
+.card,
+.container {
+  padding: 1rem;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-item {
+  flex-grow: 1;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+img.img-menu {
+  height: 12rem;
+}
+
+body {
+  background-color: green;
+  position: relative;
+  min-height: 100vh;
+}
+
+#content {
+  background-color: blueviolet;
+}
+
+.container {
+  background-color: gray;
+}
+
+.card {
+  background-color: gray;
+}
+
+footer {
+  background-color: yellowgreen;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
