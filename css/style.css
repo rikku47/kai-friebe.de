@@ -1,6 +1,23 @@
-a {
-  background-color: aqua;
-  display: inline-block;
+.center {
+  text-align: center;
+}
+
+.flex-item {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+}
+
+.flex-column {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: flex;
 }
 
 h1,
@@ -16,51 +33,53 @@ h2 {
   line-height: 2rem;
 }
 
-.card,
-.container {
-  padding: 1rem;
-}
-
-.flex-row {
-  display: flex;
-}
-
-.flex-item {
-  flex-grow: 1;
-}
-
 img {
   width: 100%;
   height: auto;
 }
 
-img.img-menu {
-  height: 12rem;
-}
-
-body {
+html body {
   background-color: green;
+  color: aqua;
+  font-size: 16px;
+  font-family: Helvetica, sans-serif;
   position: relative;
   min-height: 100vh;
 }
-
-#content {
+html body a {
+  color: aqua;
+}
+html body #content {
   background-color: blueviolet;
 }
-
-.container {
-  background-color: gray;
-}
-
-.card {
-  background-color: gray;
-}
-
-footer {
-  background-color: yellowgreen;
-  position: absolute;
+html body footer {
+  background-color: #171717;
   bottom: 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  height: 30rem;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  position: absolute;
   width: 100%;
+}
+html body footer img {
+  height: auto;
+  width: 100%;
+}
+html body footer a {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+}
+html body footer #greetings {
+  background-color: black;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

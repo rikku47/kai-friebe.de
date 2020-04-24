@@ -1,7 +1,40 @@
-a {
-    background-color: aqua;
+$font-size: 16px;
+$font-family: Helvetica, sans-serif;
 
-    display: inline-block;
+// Colors
+$font-color: aqua;
+$background-color-body: green;
+$background-color-content: blueviolet;
+$background-color-footer: #171717;
+
+.card {
+
+}
+
+.container {
+    
+}
+
+.center {
+    text-align: center;
+}
+
+.flex-item {
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+}
+
+.flex-column {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+}
+
+.flex-row {
+    display: -webkit-box;
+    display: flex;
 }
 
 h1,
@@ -17,52 +50,124 @@ h2 {
     line-height: 2rem;
 }
 
-.card,
-.container {
-    padding: 1rem;
-}
-
-.flex-row {
-    display: flex;
-}
-
-.flex-item {
-    flex-grow: 1;
-}
-
 img {
     width: 100%;
     height: auto;
 }
 
-img.img-menu {
-    height: 12rem;
-}
-
-body {
-    background-color: green;
+html {
+    body {
+        background-color: $background-color-body;
+        color: $font-color;
+        font-size: $font-size;
+        font-family: $font-family;
+        
+        position: relative;
+        min-height: 100vh;
     
-    position: relative;
-    min-height: 100vh;
+        a {
+            color: $font-color;
+        }
+
+        #content {
+            background-color: $background-color-content;
+            // padding-bottom: 2.5rem;    /* Footer height */
+        }
+    
+        footer {
+            background-color: $background-color-footer;
+
+            bottom: 0;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                    flex-direction: column;
+            height: 30rem;
+            -webkit-box-pack: justify;
+                    justify-content: space-between;
+            position: absolute;
+            width: 100%;
+        
+            img {
+                height: auto; // 12rem;
+                width: 100% // 22rem;
+            }
+
+            a {
+                -webkit-box-flex: 1;
+                        flex-grow: 1;
+                        line-height: 2rem;
+                        text-align: center;
+                        text-decoration: none;
+            }
+
+            $margin-bottom: .5rem;
+
+            #menu {
+                // margin-bottom: $margin-bottom;
+            }
+
+            #datas {
+                // margin-bottom: $margin-bottom;
+            }
+
+            #greetings {
+
+                $height: 4rem;
+
+                background-color: black;
+                text-align: center;
+                p{
+                }
+            }
+        }
+    }
 }
 
-#content {
-    background-color: blueviolet;
-    // padding-bottom: 2.5rem;    /* Footer height */
-}
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
 
-.container {
-    background-color: gray;
-}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
 
-.card {
-    background-color: gray;
-}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
 
-footer {
-    background-color: yellowgreen;
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
 
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {}
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
