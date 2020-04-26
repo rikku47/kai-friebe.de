@@ -43,16 +43,20 @@ html body {
   color: aqua;
   font-size: 16px;
   font-family: Helvetica, sans-serif;
+}
+html body #page-container {
   position: relative;
   min-height: 100vh;
 }
-html body a {
+html body #page-container a {
   color: aqua;
 }
-html body #content {
+html body #page-container #content {
   background-color: blueviolet;
+  /* padding-bottom: 100vh; */
+  /* Footer height */
 }
-html body footer {
+html body #page-container footer {
   background-color: #171717;
   bottom: 0;
   display: -webkit-box;
@@ -60,24 +64,21 @@ html body footer {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   flex-direction: column;
-  height: 30rem;
+  height: 32rem;
   -webkit-box-pack: justify;
   justify-content: space-between;
   position: absolute;
   width: 100%;
 }
-html body footer img {
-  height: auto;
-  width: 100%;
+html body #page-container footer img {
+  display: block;
 }
-html body footer a {
-  -webkit-box-flex: 1;
-  flex-grow: 1;
+html body #page-container footer a {
   line-height: 2rem;
   text-align: center;
   text-decoration: none;
 }
-html body footer #greetings {
+html body #page-container footer #greetings {
   background-color: black;
   text-align: center;
 }

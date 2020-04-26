@@ -12,7 +12,7 @@ $background-color-footer: #171717;
 }
 
 .container {
-    
+
 }
 
 .center {
@@ -62,8 +62,9 @@ html {
         font-size: $font-size;
         font-family: $font-family;
         
-        position: relative;
-        min-height: 100vh;
+        #page-container {
+            position: relative;
+            min-height: 100vh;
     
         a {
             color: $font-color;
@@ -71,7 +72,7 @@ html {
 
         #content {
             background-color: $background-color-content;
-            // padding-bottom: 2.5rem;    /* Footer height */
+            padding-bottom: 32rem;    /* Footer height */
         }
     
         footer {
@@ -83,29 +84,36 @@ html {
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
                     flex-direction: column;
-            height: 30rem;
+            height: 32rem;
             -webkit-box-pack: justify;
                     justify-content: space-between;
             position: absolute;
             width: 100%;
         
             img {
-                height: auto; // 12rem;
-                width: 100% // 22rem;
+                display: block;
+                // height: auto; // 12rem;
+                // width: 100% // 22rem;
             }
 
             a {
-                -webkit-box-flex: 1;
-                        flex-grow: 1;
-                        line-height: 2rem;
-                        text-align: center;
-                        text-decoration: none;
+                line-height: 2rem;
+                text-align: center;
+                text-decoration: none;
             }
 
             $margin-bottom: .5rem;
 
             #menu {
-                // margin-bottom: $margin-bottom;
+                a {
+                    // display: inline-block;
+                    // line-height: unset;
+                }
+
+                h2 {
+                    // line-height: 1.1;
+                    // height: 2.2em;
+                }
             }
 
             #datas {
@@ -122,6 +130,7 @@ html {
                 }
             }
         }
+    }
     }
 }
 
