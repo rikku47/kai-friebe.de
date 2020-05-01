@@ -8,7 +8,7 @@ $background-color-content: blueviolet;
 $background-color-footer: #171717;
 
 .card {
-
+    min-width: 100%;
 }
 
 .container {
@@ -52,7 +52,7 @@ h2 {
 
 img {
     width: 100%;
-    height: auto;
+    height: 15rem; // height: auto;
 }
 
 html {
@@ -62,23 +62,23 @@ html {
         font-size: $font-size;
         font-family: $font-family;
         
-        #page-container {
-            position: relative;
-            min-height: 100vh;
-    
         a {
             color: $font-color;
         }
 
         #content {
             background-color: $background-color-content;
-            padding-bottom: 32rem;    /* Footer height */
+            max-height: 100vh;
+            overflow-y: auto;
+            
+            // min-height: 100vh;
+            // padding-bottom: 30rem;    /* Footer height */
         }
     
         footer {
             background-color: $background-color-footer;
 
-            bottom: 0;
+            bottom: -30rem;
             display: -webkit-box;
             display: flex;
             -webkit-box-orient: vertical;
@@ -104,7 +104,15 @@ html {
 
             $margin-bottom: .5rem;
 
+            #footerButton {
+                background-color: black;
+                height: 2rem;
+            }
+
             #menu {
+
+                overflow-x: auto;
+
                 a {
                     // display: inline-block;
                     // line-height: unset;
@@ -121,16 +129,10 @@ html {
             }
 
             #greetings {
-
-                $height: 4rem;
-
                 background-color: black;
-                text-align: center;
-                p{
-                }
+                $height: 4rem;
             }
         }
-    }
     }
 }
 
@@ -141,10 +143,25 @@ html {
 @media (min-width: 576px) {}
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    img {
+        height: 15rem; // height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20rem;
+    }
+
+    .card {
+        min-width: 50%;
+    }
+}
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    .card {
+        min-width: 33.33%;
+    }
+}
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {}

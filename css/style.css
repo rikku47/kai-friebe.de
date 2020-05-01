@@ -1,3 +1,7 @@
+.card {
+  min-width: 100%;
+}
+
 .center {
   text-align: center;
 }
@@ -35,7 +39,7 @@ h2 {
 
 img {
   width: 100%;
-  height: auto;
+  height: 15rem;
 }
 
 html body {
@@ -44,21 +48,17 @@ html body {
   font-size: 16px;
   font-family: Helvetica, sans-serif;
 }
-html body #page-container {
-  position: relative;
-  min-height: 100vh;
-}
-html body #page-container a {
+html body a {
   color: aqua;
 }
-html body #page-container #content {
+html body #content {
   background-color: blueviolet;
-  /* padding-bottom: 100vh; */
-  /* Footer height */
+  max-height: 100vh;
+  overflow-y: auto;
 }
-html body #page-container footer {
+html body footer {
   background-color: #171717;
-  bottom: 0;
+  bottom: -30rem;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -70,17 +70,41 @@ html body #page-container footer {
   position: absolute;
   width: 100%;
 }
-html body #page-container footer img {
+html body footer img {
   display: block;
 }
-html body #page-container footer a {
+html body footer a {
   line-height: 2rem;
   text-align: center;
   text-decoration: none;
 }
-html body #page-container footer #greetings {
+html body footer #footerButton {
   background-color: black;
-  text-align: center;
+  height: 2rem;
+}
+html body footer #menu {
+  overflow-x: auto;
+}
+html body footer #greetings {
+  background-color: black;
+}
+
+@media (min-width: 768px) {
+  img {
+    height: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20rem;
+  }
+
+  .card {
+    min-width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .card {
+    min-width: 33.33%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
