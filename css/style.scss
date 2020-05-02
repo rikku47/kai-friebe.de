@@ -10,8 +10,8 @@ $font-weight: 400;
 // $background-color-content: blueviolet;
 // $background-color-menu: #171717;
 // $background-color-footer: #171717;
-// $border-color: #E300F8;
-// $shadow-color: #E300F8;
+// $border-color: #4D004D;
+// $shadow-color: #4D004D;
 
 /* Color Theme Swatches in Hex */
 // $border-color-hex: #403725;
@@ -29,19 +29,30 @@ $font-weight: 400;
 // $background-color-footer-rgba: rgba(23, 23, 23, 1);
 // $shadow-color-rgba: rgba(187, 247, 143, 1);
 
-$font-color: rgba(0, 255, 255, 1);
-$background-color-content: rgba(23, 23, 23, 1);
-$background-color-menu: rgba(0, 0, 0, 1);
+// $font-color: rgba(0, 255, 255, 1);
+// $background-color-content: rgba(23, 23, 23, 1);
+// $background-color-menu: rgba(0, 0, 0, 1);
+// $background-color-footer: rgba(21, 14, 41, 1);
+// $border-color: rgba(187, 247, 143, 1);
+// $shadow-color: rgba(64, 55, 37, 1);
+
+$header-color: #800080;
+$link-color: #800080;
+$font-color: lightsteelblue; //lightblue; //deepskyblue; //darkturquoise; //cyan; //cornflowerblue;  //#00E0FF; //#00B4B4;
+$background-color-body: #1F1F1F;
+$background-color-content: #1F1F1F;
+$background-color-entry: #1A1A1A;
+$background-color-menu: black;
 $background-color-footer: rgba(21, 14, 41, 1);
-$border-color: rgba(187, 247, 143, 1);
-$shadow-color: rgba(64, 55, 37, 1);
+$border-color:#800080;
+$shadow-color: #400040;
 
 .border {
-    border: .1rem $border-color solid;
+    border: .066rem $border-color solid;
 }
 
 .box-shadow {
-    box-shadow: 0 0 0.3rem 0.1rem $shadow-color;
+    box-shadow: 0 0 .3rem .1rem $shadow-color;
 }
 
 .card {
@@ -57,20 +68,15 @@ $shadow-color: rgba(64, 55, 37, 1);
 }
 
 .flex-item {
-    -webkit-box-flex: 1;
-            flex-grow: 1;
+    flex-grow: 1;
 }
 
 .flex-column {
-    display: -webkit-box;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column;
+    flex-direction: column;
 }
 
 .flex-row {
-    display: -webkit-box;
     display: flex;
 }
 
@@ -84,11 +90,13 @@ h3,
 h4,
 h5,
 h6 {
+    color: $header-color; //#0096FF;
     margin: 0;
 }
 
 h2 {
-    line-height: 2rem;
+    line-height: initial;
+    width: auto;
 }
 
 img {
@@ -98,63 +106,62 @@ img {
 
 html {
     body {
+        background-color: $background-color-body;
         color: $font-color;
         font-size: $font-size;
         font-family: $font-family;
         font-weight: $font-weight;
+        
         a {
-            color: $font-color;
+            color: $link-color;
         }
 
         #content {
-            background-color: $background-color-content;
-            max-height: 100vh;
-            overflow-y: auto;
+            // max-height: 100vh;
+            // overflow-y: auto;
 
             .entry {
-                background-color: $background-color-content;
+                background-color: $background-color-entry;
                 box-sizing: border-box;
                 margin-bottom: 1rem;
                 padding: .4rem;
 
                 p {
-                    line-height: 1.75rem;
+                    line-height: 1.9rem;
+                    text-align: justify;
+                    margin: 2.5rem 2.5rem 0 0;
                 }
             }
         }
     
+        #footer-button {
+            background-color: $background-color-menu;
+            bottom: 0;
+            box-sizing: border-box;
+            height: 6rem;
+            position: fixed;
+            width: 100%;
+        }
+
         footer {
             background-color: $background-color-footer;
 
-            bottom: -29rem;
-            display: -webkit-box;
+            bottom: -38rem;
             display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                    flex-direction: column;
-            height: 32rem;
-            -webkit-box-pack: justify;
-                    justify-content: space-between;
+            flex-direction: column;
+            height: 38rem;
+            justify-content: space-between;
             position: fixed;
             width: 100%;
         
             img {
                 display: block;
-                // height: auto; // 12rem;
-                // width: 100% // 22rem;
             }
 
             a {
                 line-height: 2rem;
                 text-align: center;
                 text-decoration: none;
-            }
-
-            $margin-bottom: .5rem;
-
-            #footer-button {
-                background-color: $background-color-menu;
-                height: 3rem;
             }
 
             #menu {
@@ -178,14 +185,24 @@ html {
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
     img {
+        display: inline-block;
         height: 15rem; // height: auto;
-        margin-left: auto;
-        margin-right: auto;
         width: 20rem;
     }
 
     .card {
+        box-sizing: border-box;
         min-width: 50%;
+        padding: 3rem;
+    }
+
+    html body #content .entry {
+        margin: 8rem auto 10rem;
+        padding: 4rem 3rem;
+        width: 70rem;
+        height: 100rem;
+
+        overflow-y: auto; // remove later!
     }
 }
 

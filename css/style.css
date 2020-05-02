@@ -1,11 +1,11 @@
 /* Color Theme Swatches in Hex */
 /* Color Theme Swatches in RGBA */
 .border {
-  border: 0.1rem #bbf78f solid;
+  border: 0.066rem #800080 solid;
 }
 
 .box-shadow {
-  box-shadow: 0 0 0.3rem 0.1rem #403725;
+  box-shadow: 0 0 0.3rem 0.1rem #400040;
 }
 
 .card {
@@ -21,20 +21,15 @@
 }
 
 .flex-item {
-  -webkit-box-flex: 1;
   flex-grow: 1;
 }
 
 .flex-column {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-direction: column;
 }
 
 .flex-row {
-  display: -webkit-box;
   display: flex;
 }
 
@@ -48,11 +43,13 @@ h3,
 h4,
 h5,
 h6 {
+  color: #800080;
   margin: 0;
 }
 
 h2 {
-  line-height: 2rem;
+  line-height: initial;
+  width: max-content;
 }
 
 img {
@@ -61,38 +58,40 @@ img {
 }
 
 html body {
-  color: aqua;
+  background-color: #1F1F1F;
+  color: lightsteelblue;
   font-size: calc(16px + 6 * ((100vw - 320px) / 680));
   font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
   font-weight: 400;
 }
 html body a {
-  color: aqua;
-}
-html body #content {
-  background-color: #171717;
-  max-height: 100vh;
-  overflow-y: auto;
+  color: #800080;
 }
 html body #content .entry {
-  background-color: #171717;
+  background-color: #1A1A1A;
   box-sizing: border-box;
   margin-bottom: 1rem;
   padding: 0.4rem;
 }
 html body #content .entry p {
-  line-height: 1.75rem;
+  line-height: 1.9rem;
+  text-align: justify;
+  margin: 2.5rem 2.5rem 0 0;
+}
+html body #footer-button {
+  background-color: black;
+  bottom: 0;
+  box-sizing: border-box;
+  height: 6rem;
+  position: fixed;
+  width: 100%;
 }
 html body footer {
   background-color: #150e29;
-  bottom: -29rem;
-  display: -webkit-box;
+  bottom: -38rem;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-direction: column;
-  height: 32rem;
-  -webkit-box-pack: justify;
+  height: 38rem;
   justify-content: space-between;
   position: fixed;
   width: 100%;
@@ -105,10 +104,6 @@ html body footer a {
   text-align: center;
   text-decoration: none;
 }
-html body footer #footer-button {
-  background-color: black;
-  height: 3rem;
-}
 html body footer #menu {
   overflow-x: auto;
 }
@@ -118,14 +113,23 @@ html body footer #greetings {
 
 @media (min-width: 768px) {
   img {
+    /* display: inline-block; */
     height: 15rem;
-    margin-left: auto;
-    margin-right: auto;
     width: 20rem;
   }
 
   .card {
+    box-sizing: border-box;
     min-width: 50%;
+    padding: 3rem;
+  }
+
+  html body #content .entry {
+    margin: 8rem auto 10rem;
+    padding: 4rem 3rem;
+    width: 70rem;
+    height: 100rem;
+    overflow-y: auto;
   }
 }
 @media (min-width: 992px) {
