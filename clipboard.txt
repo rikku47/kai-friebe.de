@@ -1,0 +1,36 @@
+color 0 255 255
+article 35 0 64
+menu 36 14 40
+footer 23 23 23
+border 227 0 248
+shadow 227 0 248
+
+$font-color: #00FFFF;
+$background-color-content: #150E29;
+$background-color-menu: #BBF78F;
+$background-color-footer: #171717;
+$border-color: #403725;
+$shadow-color:#BBF78F;
+
+/* Color Theme Swatches in Hex */
+$border-color-hex: #403725;
+$background-color-menu-hex: #BBF78F;
+$font-color-hex: #00FFFF;
+$background-color-content-hex: #150E29;
+$background-color-footer-hex: #171717;
+$shadow-color-hex: #BBF78F;
+
+/* Color Theme Swatches in RGBA */
+$border-color-rgba: rgba(64, 55, 37, 1);
+$background-color-menu-rgba: rgba(187, 247, 143, 1);
+$font-color-rgba: rgba(0, 255, 255, 1);
+$background-color-content-rgba: rgba(21, 14, 41, 1);
+$background-color-footer-rgba: rgba(23, 23, 23, 1);
+$shadow-color-rgba: rgba(187, 247, 143, 1);
+
+/* Color Theme Swatches in HSLA */
+@My-Color-Theme-1-hsla: hsla(40, 26, 19, 1);
+@My-Color-Theme-2-hsla: hsla(94, 86, 76, 1);
+@My-Color-Theme-3-hsla: hsla(180, 100, 50, 1);
+@My-Color-Theme-4-hsla: hsla(255, 49, 10, 1);
+@My-Color-Theme-5-hsla: hsla(0, 0, 9, 1);
