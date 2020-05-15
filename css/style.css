@@ -34,7 +34,8 @@
 }
 
 .open {
-  bottom: 0;
+  top: 0;
+  height: calc(100% - 5.5rem);
 }
 
 h1,
@@ -49,7 +50,7 @@ h6 {
 
 h2 {
   line-height: initial;
-  width: max-content;
+  width: auto;
 }
 
 img {
@@ -79,15 +80,18 @@ html body #content .entry p {
   margin: 2.5rem 2.5rem 0 0;
 }
 html body #footer-button {
+  align-items: center;
   background-color: black;
   bottom: 0;
-  box-sizing: border-box;
-  height: 6rem;
+  display: flex;
+  height: 5.5rem;
+  justify-content: center;
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 html body footer {
-  background-color: #150e29;
+  background-color: #1A1A1A;
   bottom: -38rem;
   display: flex;
   flex-direction: column;
@@ -107,13 +111,20 @@ html body footer a {
 html body footer #menu {
   overflow-x: auto;
 }
+html body footer #menu nav {
+  width: 100%;
+}
+html body footer #menu nav ul {
+  list-style: none;
+  /* width: 100%; */
+}
 html body footer #greetings {
   background-color: black;
 }
 
 @media (min-width: 768px) {
   img {
-    /* display: inline-block; */
+    display: inline-block;
     height: 15rem;
     width: 20rem;
   }
@@ -130,6 +141,14 @@ html body footer #greetings {
     width: 70rem;
     height: 100rem;
     overflow-y: auto;
+  }
+
+  #datas {
+    flex-direction: row;
+  }
+  #datas a {
+    padding: 1rem;
+    width: 33.33%;
   }
 }
 @media (min-width: 992px) {
