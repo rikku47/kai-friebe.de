@@ -40,6 +40,7 @@ $header-color: #800080;
 // $link-color: lightsteelblue;
 $link-color: #800080;
 $font-color: lightsteelblue; //lightblue; //deepskyblue; //darkturquoise; //cyan; //cornflowerblue;  //#00E0FF; //#00B4B4;
+$font-color-menu: lightsteelblue; 
 $background-color-body: #1F1F1F;
 $background-color-content: #1F1F1F;
 $background-color-entry: #1A1A1A;
@@ -84,7 +85,7 @@ $shadow-color: #400040;
 
 .open {
     top: 0;
-    height: calc(100% - 5.5rem);
+    display: flex;
 }
 
 h1,
@@ -125,14 +126,15 @@ html {
 
             .entry {
                 background-color: $background-color-entry;
-                box-sizing: border-box;
+                // box-sizing: border-box;
                 margin-bottom: 1rem;
-                padding: .4rem;
+                padding: .65rem;
 
                 p {
                     line-height: 1.9rem;
                     text-align: justify;
-                    margin: 2.5rem 2.5rem 0 0;
+                    margin-top: 1.5rem;
+                    // margin: 2.5rem 2.5rem 0 0;
                 }
             }
         }
@@ -141,9 +143,9 @@ html {
             align-items: center;
             background-color: $background-color-menu;
             bottom: 0;
-            // box-sizing: border-box;
+            box-sizing: border-box;
             display: flex;
-            height: 5.5rem;
+            height: 4rem;
             justify-content: center;
             position: fixed;
             width: 100%;
@@ -153,13 +155,12 @@ html {
         footer {
             background-color: $background-color-footer;
 
-            bottom: -38rem;
-            display: flex;
+            display: none;
             flex-direction: column;
-            height: 38rem;
-            // height: 100%;
+            height: 100%;
             justify-content: space-between;
             position: fixed;
+            bottom: 0;
             width: 100%;
         
             img {
@@ -167,6 +168,7 @@ html {
             }
 
             a {
+                color: $font-color-menu;
                 line-height: 2rem;
                 text-align: center;
                 text-decoration: none;
@@ -177,13 +179,51 @@ html {
 
                 nav {
 
+                    color: $font-color-menu;
                     width: 100%;
                     
+                    h2 {
+                        color: $font-color-menu;
+                        padding: 1rem;
+                        text-align: center;  
+                    }
+
                     ul {
+                        display: flex;
+                        flex-direction: column;
                         list-style: none;
-                        width: min-content;
+                        margin: 0;
+                        padding: 0;
+
+                        li {
+
+                            background-color: black;
+
+                            a {
+                                box-sizing: border-box;
+                                display: flex;
+                                width: 100%;
+                                padding: 0.5rem;
+                                justify-content: center;
+                                align-items: center;
+
+                                i {
+                                    padding-right: 1rem;
+                                    position: absolute;
+                                    right: 0;
+                                }
+                            }
+
+                            .submenu {
+                                display: none;
+                            }
+                        }
                     }
                 }
+            }
+
+            #datas {
+                padding-bottom: 4.5rem;
             }
 
             #greetings {
