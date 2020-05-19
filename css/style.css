@@ -58,6 +58,15 @@ img {
   height: 15rem;
 }
 
+input {
+  border-radius: 0.3rem;
+}
+
+[type=submit] {
+  background-color: #400040;
+  color: white;
+}
+
 html body {
   background-color: #1F1F1F;
   color: lightsteelblue;
@@ -74,6 +83,24 @@ html body #content .entry {
   padding: 0.65rem;
 }
 html body #content .entry p {
+  line-height: 1.9rem;
+  text-align: justify;
+  margin-top: 1.5rem;
+}
+html body #content .form {
+  background-color: #1A1A1A;
+  box-sizing: border-box;
+  padding: 3rem;
+  margin: 6rem;
+}
+html body #content .form h1 {
+  text-align: center;
+}
+html body #content .form form {
+  display: flex;
+  flex-direction: column;
+}
+html body #content .form p {
   line-height: 1.9rem;
   text-align: justify;
   margin-top: 1.5rem;

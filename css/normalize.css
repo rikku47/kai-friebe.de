@@ -167,6 +167,8 @@ textarea {
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
+  /* border: .1rem solid darkblue; */
+  border-radius: .3rem;
 }
 
 /**
